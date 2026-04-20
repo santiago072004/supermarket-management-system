@@ -1,0 +1,192 @@
+# 🛒 Supermercado Dashboard
+
+![Next.js](https://img.shields.io/badge/Next.js-13+-black?style=for-the-badge\&logo=next.js)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge\&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge\&logo=typescript)
+![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey?style=for-the-badge\&logo=sqlite)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+Sistema web tipo **Punto de Venta (POS) + Panel Administrativo** para supermercados, enfocado en resolver la gestión diaria de ventas, inventario y usuarios en negocios reales.
+
+---
+
+## 🎯 ¿Qué problema resuelve?
+
+Muchos supermercados pequeños gestionan su operación con Excel o sistemas poco integrados.
+
+Este proyecto soluciona:
+
+* ❌ Falta de control de inventario en tiempo real
+* ❌ Procesos manuales en ventas
+* ❌ Mala gestión de usuarios y roles
+* ❌ Dificultad para visualizar ingresos y métricas
+
+✔️ Proporcionando un sistema centralizado, rápido y fácil de usar.
+
+---
+
+## 🧠 ¿Qué se desarrolló?
+
+Se diseñó e implementó un sistema completo que incluye:
+
+### 🔐 Autenticación
+
+* Login mediante correo y contraseña
+* Contraseñas hasheadas con **bcrypt**
+* Control de acceso según roles
+
+---
+
+### 📊 Dashboard inteligente
+
+* Visualización en tiempo real de:
+
+  * Ventas
+  * Ingresos
+  * Productos
+  * Alertas de stock
+* Permite toma de decisiones rápidas
+
+---
+
+### 👥 Gestión de usuarios
+
+* CRUD completo de usuarios
+* Sistema de roles:
+
+  * Administrador
+  * Cajero
+  * Inventario
+* Restricción de seguridad (no auto-eliminación)
+
+---
+
+### 📦 Inventario
+
+* Gestión de productos y categorías
+* Control de stock actualizado automáticamente
+* Alertas cuando el inventario es bajo
+
+---
+
+### 💰 Sistema de ventas (POS)
+
+* Registro de ventas desde interfaz
+* Actualización automática del inventario
+* Flujo pensado para uso rápido en caja
+
+---
+
+### 🏢 Proveedores (decisión técnica)
+
+* Gestión directa en base de datos
+* No expuesto en frontend para evitar manipulación indebida
+
+---
+
+## ⚙️ ¿Por qué se tomaron estas decisiones?
+
+* 🔄 **SQLite en lugar de MySQL**
+
+  * Portabilidad total (un solo archivo `.db`)
+  * No requiere servidor externo
+  * Ideal para entornos locales y pequeños negocios
+
+* 🔒 **Separación de lógica sensible**
+
+  * Proveedores gestionados solo en DB
+  * Mayor control y seguridad
+
+* ⚡ **Next.js (App Router)**
+
+  * Permite manejar frontend y backend en un solo proyecto
+  * Mejor organización y rendimiento
+
+---
+
+## 🌐 Demo online
+
+🚀 https://TU-DEMO.vercel.app
+
+**Credenciales:**
+
+* Usuario: `admin@supermercado.com`
+* Contraseña: `admin`
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard](./public/screenshots/dashboard.png)
+
+### Productos
+
+![Productos](./public/screenshots/productos.png)
+
+### Usuarios
+
+![Usuarios](./public/screenshots/usuarios.png)
+
+### Ventas
+
+![Ventas](./public/screenshots/ventas.png)
+
+---
+
+## 🛠️ Stack tecnológico
+
+| Tecnología  | Uso                 |
+| ----------- | ------------------- |
+| Next.js     | Fullstack framework |
+| React       | Interfaz            |
+| TypeScript  | Tipado              |
+| SQLite      | Base de datos       |
+| TailwindCSS | Estilos             |
+| SWR         | Manejo de datos     |
+| bcryptjs    | Seguridad           |
+
+---
+
+## ⚡ Instalación
+
+```bash
+git clone https://github.com/santiago072004/supermarket-management-system.git
+cd supermercado-dashboard
+npm install
+npm run dev
+```
+
+---
+
+## 🚧 En desarrollo
+
+* Recuperación de contraseña
+* Autenticación en dos pasos (2FA)
+* Reportes exportables
+* Deploy con base de datos remota
+
+---
+
+## 💼 Lo que demuestra este proyecto
+
+* Desarrollo **fullstack con Next.js**
+* Diseño de **base de datos relacional**
+* Implementación de **autenticación segura**
+* Manejo de **roles y permisos**
+* Construcción de un sistema aplicable a negocio real
+* Capacidad de tomar **decisiones técnicas justificadas**
+
+---
+
+## 📌 Autor
+
+**Santiago España**
+Ingeniería de Sistemas
+
+---
+
+## ⭐
+
+Si te interesa el proyecto, puedes darle una estrella ⭐
